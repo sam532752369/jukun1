@@ -60,8 +60,8 @@ public class MysqlGenerator {
     private static String projectName="onefun";//aaa
     private static String packageClass="";//bbb
     private static String authorName="Lin_huanwen";
-    private static String[] table=new String[]{"t_user"};//t_user
-    private static String[] prefix=new String[]{"t_"};//前缀 t_
+    private static String[] table=new String[]{"msg"};//t_user
+    private static String[] prefix=new String[]{""};//前缀 t_
     private static File file = new File(packageName);
     private static String path = file.getAbsolutePath();
     
@@ -85,7 +85,7 @@ public class MysqlGenerator {
                 new GlobalConfig()
                         .setOutputDir(path+"/src/main/java")//输出目录
                         .setFileOverride(true)// 是否覆盖文件
-                        .setActiveRecord(true)// 开启 activeRecord 模式
+                        .setActiveRecord(false)// 开启 activeRecord 模式
                         .setEnableCache(false)// XML 二级缓存
                         .setBaseResultMap(true)// XML ResultMap
                         .setBaseColumnList(true)// XML columList
@@ -138,9 +138,9 @@ public class MysqlGenerator {
                 // 自定义 service 实现类父类
                 .setSuperServiceImplClass(baoPath+".base.BaseServiceImpl")
                 // 自定义 controller 父类
-                .setSuperControllerClass(baoPath+".base.BaseController")
+                //.setSuperControllerClass(baoPath+".base.BaseController")
                 // 自定义 entity 父类
-                .setSuperEntityClass(baoPath+".base.BaseEntity")
+                //.setSuperEntityClass(baoPath+".base.BaseEntity")
                 // 【实体】是否生成字段常量（默认 false）
                 // public static final String ID = "test_id";
                 // .setEntityColumnConstant(true)
