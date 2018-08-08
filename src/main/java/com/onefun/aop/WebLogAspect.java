@@ -52,16 +52,16 @@ public class WebLogAspect {
 		}catch (Exception e) {
 			// TODO Auto-generated catch block
         	result=new JSONResult<Object>();
-        	result.setStatus(1);
-        	result.setMsg("系统异常！");
+        	result.setStatus(-1);
+        	result.setMsg("系统异常！"+e.getMessage());
         	logger.error("【系统异常】{}",e);
         	System.err.println(e);
         	return result;
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
         	result=new JSONResult<Object>();
-        	result.setStatus(1);
-        	result.setMsg("系统异常！");
+        	result.setStatus(-1);
+        	result.setMsg("系统异常！"+e.getMessage());
         	logger.error("【系统异常】{}",e);
         	System.err.println(e);
         	return result;
