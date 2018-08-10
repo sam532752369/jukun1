@@ -27,7 +27,7 @@ public class MybatisPlusConfig {
         druidProperties.config(dataSource);
         return dataSource;
     }
-
+    
     /**
      * mybatis-plus分页插件
      */

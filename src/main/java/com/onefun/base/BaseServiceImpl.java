@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.xml.ws.RespectBinding;
@@ -55,58 +56,58 @@ public class BaseServiceImpl<M extends BaseDao<T>, T> extends ServiceImpl<M, T> 
         return page;
     }
 
-    public Page<T> selectPageWithMap (Page<T> page, Map<String,Object> map) {
-        page.setRecords(this.baseDao.selectPageWithMap(page,map));
-        return page;
-    }
+//    public Page<T> selectPageWithMap (Page<T> page, Map<String,Object> map) {
+//        page.setRecords(this.baseDao.selectPageWithMap(page,map));
+//        return page;
+//    }
+//
+//    public List<T> selectListWithParam (T param) {
+//        return this.baseDao.selectListWithParam(param);
+//    }
+//
+//    public List<T> selectListWithMap (Map<String,Object> map) {
+//        return this.baseDao.selectListWithMap(map);
+//    }
+//
+//    public List<Map<String,Object>> selectListMapWithParam(T param) {
+//        return this.baseDao.selectListMapWithParam(param);
+//    }
+//
+//    public List<Map<String,Object>> selectListMapWithMap(Map<String,Object> map) {
+//        return this.baseDao.selectListMapWithMap(map);
+//    }
+//
+//    public List<Object> selectListObjWithParam(T param) {
+//        return this.baseDao.selectListObjWithParam(param);
+//    }
+//
+//    public List<Object> selectListObjWithMap(Map<String,Object> map) {
+//        return this.baseDao.selectListObjWithMap(map);
+//    }
+//
+//    public Map<String, Object> selectMapWithParam(T param) {
+//        return this.baseDao.selectMapWithParam(param);
+//    }
+//
+//    public Map<String, Object> selectMapWithMap(Map<String,Object> map) {
+//        return this.baseDao.selectMapWithMap(map);
+//    }
+//
+//    public Object selectObjWithParam(T param) {
+//        return this.baseDao.selectObjWithParam(param);
+//    }
+//
+//    public Object selectObjWithMap(Map<String,Object> map) {
+//        return this.baseDao.selectObjWithMap(map);
+//    }
 
-    public List<T> selectListWithParam (T param) {
-        return this.baseDao.selectListWithParam(param);
-    }
-
-    public List<T> selectListWithMap (Map<String,Object> map) {
-        return this.baseDao.selectListWithMap(map);
-    }
-
-    public List<Map<String,Object>> selectListMapWithParam(T param) {
-        return this.baseDao.selectListMapWithParam(param);
-    }
-
-    public List<Map<String,Object>> selectListMapWithMap(Map<String,Object> map) {
-        return this.baseDao.selectListMapWithMap(map);
-    }
-
-    public List<Object> selectListObjWithParam(T param) {
-        return this.baseDao.selectListObjWithParam(param);
-    }
-
-    public List<Object> selectListObjWithMap(Map<String,Object> map) {
-        return this.baseDao.selectListObjWithMap(map);
-    }
-
-    public Map<String, Object> selectMapWithParam(T param) {
-        return this.baseDao.selectMapWithParam(param);
-    }
-
-    public Map<String, Object> selectMapWithMap(Map<String,Object> map) {
-        return this.baseDao.selectMapWithMap(map);
-    }
-
-    public Object selectObjWithParam(T param) {
-        return this.baseDao.selectObjWithParam(param);
-    }
-
-    public Object selectObjWithMap(Map<String,Object> map) {
-        return this.baseDao.selectObjWithMap(map);
-    }
-
-    public T selectOneWithParam (T param) {
-        return this.baseDao.selectOneWithParam(param);
-    }
-
-    public T selectOneWithMap(Map<String,Object> map) {
-        return this.baseDao.selectOneWithMap(map);
-    }
+//    public T selectOneWithParam (T param) {
+//        return this.baseDao.selectOneWithParam(param);
+//    }
+//
+//    public T selectOneWithMap(Map<String,Object> map) {
+//        return this.baseDao.selectOneWithMap(map);
+//    }
 
     public T selectOneByObj(Serializable var1){
         return this.baseDao.selectOneByObj(var1);

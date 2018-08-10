@@ -45,6 +45,16 @@
 		*
 		#end
 		from ${table.name}
+		
+		where 1=1
+		 #foreach($field in ${table.fields})
+		     #if(${field.type.indexOf("varchar")}==0||${field.type.indexOf("nvarchar")}==0||${field.type.indexOf("char")}==0)
+		        <if test="${field.propertyName} != null and ${field.propertyName}.length()>0" >and ${field.name}=#{${field.propertyName}}</if>
+		     #else
+		        <if test="${field.propertyName} != null">and ${field.name}=#{${field.propertyName}}</if>
+		     #end
+		 #end
+		
 	</select>
 
 	<select id="selectOneByObj" resultType="${package.Entity}.${entity}" parameterType="java.lang.Integer">

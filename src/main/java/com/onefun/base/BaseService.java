@@ -48,7 +48,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 15:49
      */
-    Page<T> selectPageWithMap(Page<T> page, Map<String, Object> map);
+    //Page<T> selectPageWithMap(Page<T> page, Map<String, Object> map);
 
     /**
      * @Description : 获取列表数据（实体类）
@@ -56,7 +56,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 19:41
      */
-    List<T> selectListWithParam(T param);
+    //List<T> selectListWithParam(T param);
 
     /**
      * @Description : 获取列表数据 （Map）
@@ -64,7 +64,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 19:41
      */
-    List<T> selectListWithMap(Map<String, Object> map);
+    //List<T> selectListWithMap(Map<String, Object> map);
 
     /**
      * @Description : 获取List<Map>数据（实体类）
@@ -72,7 +72,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:10
      */
-    List<Map<String,Object>> selectListMapWithParam(T param);
+    //List<Map<String,Object>> selectListMapWithParam(T param);
 
     /**
      * @Description : 获取List<Map>数据（Map）
@@ -80,7 +80,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:10
      */
-    List<Map<String,Object>> selectListMapWithMap(Map<String, Object> map);
+    //List<Map<String,Object>> selectListMapWithMap(Map<String, Object> map);
 
     /**
      * @Description : 获取List<Object>数据（实体类）
@@ -88,7 +88,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:11
      */
-    List<Object> selectListObjWithParam(T param);
+    //List<Object> selectListObjWithParam(T param);
 
     /**
      * @Description : 获取List<Object>数据（Map）
@@ -96,7 +96,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:11
      */
-    List<Object> selectListObjWithMap(Map<String, Object> map);
+   // List<Object> selectListObjWithMap(Map<String, Object> map);
 
     /**
      * @Description : 获取Map数据（实体类）
@@ -104,7 +104,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 19:53
      */
-    Map<String, Object> selectMapWithParam(T param);
+    //Map<String, Object> selectMapWithParam(T param);
 
     /**
      * @Description : 获取Map数据（Map）
@@ -112,7 +112,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 19:53
      */
-    Map<String, Object> selectMapWithMap(Map<String, Object> map);
+   // Map<String, Object> selectMapWithMap(Map<String, Object> map);
 
     /**
      * @Description : 获取Object数据（实体类）
@@ -120,7 +120,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:02
      */
-    Object selectObjWithParam(T param);
+   // Object selectObjWithParam(T param);
 
     /**
      * @Description : 获取Object数据（Map）
@@ -128,7 +128,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 20:02
      */
-    Object selectObjWithMap(Map<String, Object> map);
+    //Object selectObjWithMap(Map<String, Object> map);
     
     /**
      * @Description : 获取指定数据（实体类）
@@ -136,7 +136,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 15:51
      */
-    T selectOneWithParam(T param);
+   // T selectOneWithParam(T param);
 
     /**
      * @Description : 获取指定数据（Map）
@@ -144,7 +144,7 @@ public interface BaseService<T> extends IService<T> {
      * @Author : Liang.Guangqing
      * @Date : Create in 2017/11/2 15:59
      */
-    T selectOneWithMap(Map<String, Object> map);
+   // T selectOneWithMap(Map<String, Object> map);
 
     /**
      * @Description : 获取指定数据（Obj）

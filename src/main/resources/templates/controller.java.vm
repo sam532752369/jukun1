@@ -1,7 +1,9 @@
 package ${package.Controller};
 
 import org.springframework.web.bind.annotation.*;
-
+import java.util.Map;
+import java.util.HashMap;
+import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.web.bind.annotation.RequestMapping;
 #if(${restControllerStyle})
 import org.springframework.web.bind.annotation.RestController;
@@ -52,7 +54,7 @@ public class ${table.controllerName} {
      */
     @GetMapping("/get${entity}ById")
     @ApiOperation(value="通过id获取${entity}", notes="通过id获取${entity}")
-    @ApiImplicitParam(name = "id", paramType="query", value = "${entity}ID", dataType="integer", required = true)
+    @ApiImplicitParam(name = "id", paramType="query", value = "${entity}ID", dataType="int", required = true)
     public JSONResult<${entity}> get${entity}ById(Integer id) throws Exception{
             JSONResult<${entity}> resJson = new JSONResult<>();
             ${entity} param= ${table.entityPath}Service.selectOneByObj(id);
@@ -69,7 +71,7 @@ public class ${table.controllerName} {
      */
     @GetMapping("/delete${entity}ById")
     @ApiOperation(value="通过id删除${entity}", notes="通过id删除${entity}")
-    @ApiImplicitParam(name = "id", paramType="query", value = "${entity}ID", dataType="integer", required = true)
+    @ApiImplicitParam(name = "id", paramType="query", value = "${entity}ID", dataType="int", required = true)
     public JSONResult<${entity}> delete${entity}ById(Integer id) throws Exception{
             JSONResult<${entity}> resJson = new JSONResult<>();
             boolean boo=${table.entityPath}Service.deleteById(id);
@@ -106,4 +108,28 @@ public class ${table.controllerName} {
             resJson.setStatus(boo?0:1);
             return resJson;
     }
+    
+    /**
+     * @description : 获取分页列表
+     * ---------------------------------
+     * @author : ${author}
+     * @since : Create in ${date}
+     */
+   /* @PostMapping("/get${entity}List")
+    @ApiOperation(value="/get${entity}List", notes="获取分页列表")
+    @ApiImplicitParams({
+    	 @ApiImplicitParam(name = "length", paramType="query", value = "length", dataType="int", required = true),
+    	 @ApiImplicitParam(name = "pageNo", paramType="query", value = "pageNo", dataType="int", required = true)
+    })
+    public JSONResult<Map<String, Object>> get${entity}List(@ApiParam(name="${entity}",value="${entity} 实体类")@RequestBody ${entity} param ,Integer length,Integer pageNo) throws Exception{
+            JSONResult<Map<String, Object>> resJson=new JSONResult<Map<String, Object>>();
+            Page<${entity}> page=new Page<${entity}>(pageNo,length);
+            ${table.entityPath}Service.selectPageWithParam(page, param);
+            Map<String,Object> map=new HashMap<>();
+            map.put("total", page.getTotal());
+            map.put("list", page.getRecords());
+            resJson.setData(map);
+            resJson.setStatus(0);
+            return resJson;
+    }*/
 }
